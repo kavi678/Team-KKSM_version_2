@@ -97,3 +97,15 @@ html {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+.recipeking{
+  font-family: serif ;
+  font-size: 60px;
+  padding: 30px 0;
+  color: white;
+}
+.rk{
+  width: 90%;
+  margin: auto;
+  background-color: #333;
+  border-radius: 30px;
+}

@@ -8,7 +8,7 @@
   <title>Ingredients List</title>
 </head>
 
-<body class="body1">
+<body class="body1" onload="init()">
   <h1 class="body1_h1"></h1>
 <div id="mySidenav" class="sidenav">
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><button class="btn1"><i class="fa fa-close"></i></button></a>
@@ -21,87 +21,64 @@
 
 <div id="lnav">
 <span style="font-size:30px;cursor:pointer" ><button class="btn" onclick="openNav()"><i class="fa fa-bars"></i></button></span>
-</div>
+</div><br><br><br><br>
 
-<div class="content">
-  <br><br><br><br><br>
-<h1 class="h1h1">Ingredients List</h1><br><br>
-<div class="ingredients">
-  <p class="p1">Eggs</p>
-  <p class="p2">12 Quantity</p>
-  <p class="p3">1000 Kcal</p>
-  <p class="p4"><button type="button" name="button"><i class="material-icons" style="font-size:18px">border_color</i></button></p>
-  <p class="p5"><button><i class="fa fa-trash"></i></button></p>
-</div>
+<h1 class="h1h1">Ingredients List</h1>
+
+
+      <table id="output1" class="out1">
+          <thead>
+              <tr>
+                  <th>Ingridients</th>
+                  <th>Type</th>
+                  <th>Quantity</th>
+                  <th>Calories(kcal)</th>
+
+
+              </tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+      <br><br><br>
+      <a href="ingredients.html" class="adding"><button onclick="del1();">Clear all ingridients</button></a><br><br>
+      <div id="myForm">
+      <ul class="form-style-1">
+        <li><label for="excersise1" class="day1css">Ingridient <span class="required">*</span></label>
+          <input type="text" name="Exercise" class="field-long" id="excersise1" /></li>
+
+          <li>
+            <label for="muscle1" class="day1css">Type <span class="required">*</span></label>
+            <select name="Muscles" class="field-select" id="muscle1">
+              <option value="Long-Life">Long-Life</option>
+              <option value="Frozen">Frozen</option>
+              <option value="Perisables">Perisables</option>
+              <option value="spices">spices</option>
+            </select>
+          </li>
+          <li>
+            <label for="set1" class="day1css">Quantity <span class="required">*</span></label>
+            <input type="text" name="Sets" class="field-divided" id="set1">
+          </li>
+          <li>
+            <label for="rep1" class="day1css">Calories(kcal) <span class="required">*</span></label>
+            <input type="number" name="Reps" class="field-divided" id="rep1" step="5">
+          </li>
+
+            <li>
+
+              <a href="ingredients.html"><button class="ad1" id="add_data" onclick="add1()" >Add Data</button></a>
+            </li>
+          </ul>
+          <button type="button" class="ad1" onclick="closeForm()">Close</button>
+          <br>
+      </div><br><br>
+        <button class="adding" type="button" name="button" onclick="openForm()">Add Ingredients</button>
+
   <br>
-  <div class="ingredients">
-    <p class="p1">Breads</p>
-    <p class="p2">500 grams</p>
-    <p class="p3">500 Kcal</p>
-    <p class="p4"><button type="button" name="button"><i class="material-icons" style="font-size:18px">border_color</i></button></p>
-    <p class="p5"><button><i class="fa fa-trash"></i></button></p>
-  </div>
-  <br>
-  <div class="ingredients">
-    <p class="p1">Potatoes</p>
-    <p class="p2">1 Kg</p>
-    <p class="p3">250 Kcal</p>
-    <p class="p4"><button type="button" name="button"><i class="material-icons" style="font-size:18px">border_color</i></button></p>
-    <p class="p5"><button><i class="fa fa-trash"></i></button></p>
-  </div>
-  <br>
-  <div class="ingredients">
-    <p class="p1">Tomatoes</p>
-    <p class="p2">500 grams</p>
-    <p class="p3">200 Kcal</p>
-    <p class="p4"><button type="button" name="button"><i class="material-icons" style="font-size:18px">border_color</i></button></p>
-    <p class="p5"><button><i class="fa fa-trash"></i></button></p>
-  </div>
-  <br>
-  <div class="ingredients">
-    <p class="p1">Chicken</p>
-    <p class="p2">800 grams</p>
-    <p class="p3">900 Kcal</p>
-    <p class="p4"><button type="button" name="button"><i class="material-icons" style="font-size:18px">border_color</i></button></p>
-    <p class="p5"><button><i class="fa fa-trash"></i></button></p>
-  </div>
-  <br>
-  <div class="ingredients">
-    <p class="p1">Chicken</p>
-    <p class="p2">800 grams</p>
-    <p class="p3">900 Kcal</p>
-    <p class="p4"><button type="button" name="button"><i class="material-icons" style="font-size:18px">border_color</i></button></p>
-    <p class="p5"><button><i class="fa fa-trash"></i></button></p>
-  </div>
-  <br>
-  <div class="ingredients">
-    <p class="p1">Chicken</p>
-    <p class="p2">800 grams</p>
-    <p class="p3">900 Kcal</p>
-    <p class="p4"><button type="button" name="button"><i class="material-icons" style="font-size:18px">border_color</i></button></p>
-    <p class="p5"><button><i class="fa fa-trash"></i></button></p>
-  </div>
-  <br>
-  <div class="ingredients">
-    <p class="p1">Chicken</p>
-    <p class="p2">800 grams</p>
-    <p class="p3">900 Kcal</p>
-    <p class="p4"><button type="button" name="button"><i class="material-icons" style="font-size:18px">border_color</i></button></p>
-    <p class="p5"><button><i class="fa fa-trash"></i></button></p>
-  </div>
-  <br>
-  <div class="ingredients">
-    <p class="p1">Chicken</p>
-    <p class="p2">800 grams</p>
-    <p class="p3">900 Kcal</p>
-    <p class="p4"><button type="button" name="button"><i class="material-icons" style="font-size:18px">border_color</i></button></p>
-    <p class="p5"><button><i class="fa fa-trash"></i></button></p>
-  </div>
-  <br>
-  <button class="adding" type="button" name="button">Add Ingredients</button>
+
   <br><br>
-  <button class="rbutton"><a><img class="rimg" src="../images/rbutton.png" alt="hbutton"></a></button>
-</div>
+  <button class="rbutton" ><a href="filter.html"><img class="rimg" src="../images/rbutton.png" alt="hbutton"></a></button>
 
 
 
